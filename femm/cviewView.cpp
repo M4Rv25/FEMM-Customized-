@@ -114,7 +114,7 @@ CcviewView::CcviewView()
 	d_ShowMask=FALSE;
 	d_DensityPlot=1;
 	d_VectorPlot=0;
-	d_PtsFlag=TRUE;		
+	d_PtsFlag=FALSE;		
 	d_ResetOnReload=FALSE;
 	d_Smooth=TRUE;
 	d_PlotPoints=1500;
