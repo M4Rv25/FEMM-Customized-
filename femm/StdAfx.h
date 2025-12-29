@@ -99,7 +99,7 @@ CString ToString(CComplex x, int n);
 
 // Default mesh size is the diagonal of the geometry's
 // bounding box divided by BoundingBoxFraction
-#define BoundingBoxFraction 100.0
+#define BoundingBoxFraction 250.0
 #define LineFraction 500.0
 #define DEFAULT_MINIMUM_ANGLE 30.0
 // kludge to make mesh from Triangle 1.6 have about the
