@@ -152,7 +152,7 @@ CcviewView::CcviewView()
 	Grey18=dGrey18;
 	Grey19=dGrey19;
 
-	// BELA Colormap
+	// Seaborn "rocket" Colormap
 	Color19=dColor19;
 	Color18=dColor18;
 	Color17=dColor17;
