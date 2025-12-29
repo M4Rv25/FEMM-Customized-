@@ -1349,16 +1349,38 @@ void CFemmeView::OnZoomNatural()
 			GridSize=pow(10.,floor(log(w)/log(10.)-0.5));
 	}
 
-	ox=x[0]; oy=y[0];
 	GetClientRect(&r);
-	m[0]=((double) (r.right-1))/(x[1]-x[0]);
-	m[1]=((double) (r.bottom-1))/(y[1]-y[0]);
+	m[0] = ((double)(r.right - 1)) / (x[1] - x[0]);
+	m[1] = ((double)(r.bottom - 1)) / (y[1] - y[0]);
 
-	if(m[0]<m[1]) mag=m[0];
-	else mag=m[1];
-	
-	if(pDoc->FirstDraw==TRUE)
-		pDoc->FirstDraw=FALSE;
+	if ((x[1] - x[0]) == 0.0 || (y[1] - y[0]) == 0.0) {
+		// Fallback to old behavior
+		ox = x[0];
+		oy = y[0];
+		if (m[0] < m[1]) mag = m[0];
+		else mag = m[1];
+	}
+	else {
+		if (m[0] < m[1]) mag = m[0];
+		else mag = m[1];
+
+		double cx = 0.5 * (x[0] + x[1]);
+		double cy = 0.5 * (y[0] + y[1]);
+		double screenCenterX = ((double)(r.right - 1)) / 2.0;
+		double screenCenterY = ((double)(r.bottom - 1)) / 2.0;
+
+		if (mag != 0.0) {
+			ox = cx - screenCenterX / mag;
+			oy = cy - screenCenterY / mag;
+		}
+		else {
+			ox = x[0];
+			oy = y[0];
+		}
+	}
+
+	if (pDoc->FirstDraw == TRUE)
+		pDoc->FirstDraw = FALSE;
 	else InvalidateRect(NULL);
 }
 
