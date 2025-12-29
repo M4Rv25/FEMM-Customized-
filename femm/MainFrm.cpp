@@ -81,21 +81,6 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_StatusBarFont.CreateFontIndirect(&lf);    // Create the font.
 	m_wndStatusBar.SetFont(&m_StatusBarFont);
 
-	// create output window;
-	EnableDocking(0);
-	
-	if(m_dlgBar.Create(IDD_OUTBOX,this)!=0)
-	{
-		m_dlgBar.SetWindowText("FEMM Output");
-		CRect rc;
-		GetClientRect(&rc);
-		ClientToScreen(&rc);
-		CPoint p=rc.BottomRight();
-		p.x-=175; p.y-=300;
-		m_dlgBar.SetWindowPos(this,p.x,p.y,0,0,SWP_NOSIZE);
-	} 
-	theApp.bShowOutputWindow=theApp.d_bShowOutputWindow;
-
 	// flash up title;
 	{
 		CString s;
