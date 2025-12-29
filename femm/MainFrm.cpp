@@ -101,14 +101,6 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	}
 	m_wndToolBar1.SetBarStyle(m_wndToolBar1.GetBarStyle() |
 		CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC);
-
-	if (!m_wndToolBar2.Create(this, WS_CHILD | WS_VISIBLE | CBRS_LEFT
-		| CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_FLOAT_MULTI |CBRS_SIZE_DYNAMIC) ||
-		!m_wndToolBar2.LoadToolBar(IDR_MAIN2))
-	{
-		TRACE0("Failed to create toolbar\n");
-		return -1;      // fail to create
-	}
 	//</DP>
 
 	if (!m_FV_toolBar1.Create(this, WS_CHILD  | CBRS_TOP
@@ -120,7 +112,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	}
 	m_FV_toolBar1.SetWindowText("Femmview Toolbar");
 
-	if (!m_leftbar.Create(this, WS_CHILD  | CBRS_LEFT
+	if (!m_leftbar.Create(this, WS_CHILD  | CBRS_TOP
 		| CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_FLOAT_MULTI | CBRS_SIZE_DYNAMIC) ||
 		!m_leftbar.LoadToolBar(IDR_LEFTBAR))
 	{
@@ -195,7 +187,6 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	// Make toolbars dockable
 	m_wndToolBar1.EnableDocking(CBRS_ALIGN_ANY); //<DP>
-	m_wndToolBar2.EnableDocking(CBRS_ALIGN_ANY); //<DP>
 	m_BD_toolBar1.EnableDocking(CBRS_ALIGN_ANY);
     m_HD_toolBar1.EnableDocking(CBRS_ALIGN_ANY);
 	m_CD_toolBar1.EnableDocking(CBRS_ALIGN_ANY);
@@ -208,7 +199,6 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	EnableDocking(CBRS_ALIGN_ANY);
 
 	DockControlBar( &m_wndToolBar1);
-	DockControlBar( &m_wndToolBar2);
 
 	DockControlBarLeftOf(&m_FE_toolBar1, &m_wndToolBar1);
 	DockControlBarLeftOf(&m_BD_toolBar1, &m_wndToolBar1);
@@ -218,8 +208,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	DockControlBarLeftOf(&m_BV_toolBar1,  &m_wndToolBar1);
 	DockControlBarLeftOf(&m_HV_toolBar1,  &m_wndToolBar1);
 	DockControlBarLeftOf(&m_CV_toolBar1,  &m_wndToolBar1);
-
-	DockControlBarLeftOf(&m_leftbar, &m_wndToolBar2);
+	DockControlBarLeftOf(&m_leftbar, &m_wndToolBar1);
 
 	m_LuaConsole.Create(IDD_LUACONSOLE);
 

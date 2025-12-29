@@ -29,7 +29,7 @@ public:
 	CToolBar		m_HV_toolBar1;
 	CToolBar		m_CV_toolBar1;
 	CToolBar		m_leftbar;
-	CToolBar		m_wndToolBar1,m_wndToolBar2;
+	CToolBar		m_wndToolBar1;
 	CFont			m_StatusBarFont;
 	CLuaConsoleDlg	m_LuaConsole;
 	
