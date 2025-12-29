@@ -133,7 +133,7 @@ CLuaConsoleDlg *LuaConsole=NULL;
 int luafilepointer; // both used during the CMyCommandLineInfo parsing
 CFemmApp *pApp;
 HANDLE hProc;
-int m_luaWindowStatus=SW_SHOW;
+int m_luaWindowStatus= SW_SHOWMAXIMIZED;
 CString luascriptname;
 
 void *pFemmeDoc=NULL;	 // pointer to the Femme    document currently in use
