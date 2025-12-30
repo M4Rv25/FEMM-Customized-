@@ -3683,55 +3683,56 @@ void CFemmviewView::OnRButtonDblClk(UINT nFlags, CPoint point)
 	CView::OnRButtonDblClk(nFlags, point);
 }
 
-
-
-
-void CFemmviewView::OnPanDown() 
+void CFemmviewView::OnPanDown()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	oy-=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy += 0.1 * y / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void CFemmviewView::OnPanLeft() 
+void CFemmviewView::OnPanLeft()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox-=0.25*x/mag;
+	x = r.right; y = r.bottom;
+	ox += 0.1 * x / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void CFemmviewView::OnPanRight() 
+void CFemmviewView::OnPanRight()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox+=0.25*x/mag;
+	x = r.right; y = r.bottom;
+	ox -= 0.1 * x / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void CFemmviewView::OnPanUp() 
+void CFemmviewView::OnPanUp()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	oy+=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy -= 0.1 * y / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
 void CFemmviewView::OnViewCircprops() 

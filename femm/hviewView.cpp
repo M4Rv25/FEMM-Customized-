@@ -2648,55 +2648,56 @@ void ChviewView::OnRButtonDblClk(UINT nFlags, CPoint point)
 	CView::OnRButtonDblClk(nFlags, point);
 }
 
-
-
-
-void ChviewView::OnPanDown() 
+void ChviewView::OnPanDown()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	oy-=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy += 0.1 * y / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void ChviewView::OnPanLeft() 
+void ChviewView::OnPanLeft()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox-=0.25*x/mag;
+	x = r.right; y = r.bottom;
+	ox += 0.1 * x / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void ChviewView::OnPanRight() 
+void ChviewView::OnPanRight()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox+=0.25*x/mag;
+	x = r.right; y = r.bottom;
+	ox -= 0.1 * x / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void ChviewView::OnPanUp() 
+void ChviewView::OnPanUp()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	oy+=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy -= 0.1 * y / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
 void ChviewView::OnViewCircprops() 

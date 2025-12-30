@@ -2683,55 +2683,56 @@ void CbelaviewView::OnRButtonDblClk(UINT nFlags, CPoint point)
 	CView::OnRButtonDblClk(nFlags, point);
 }
 
-
-
-
-void CbelaviewView::OnPanDown() 
+void CbelaviewView::OnPanDown()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	oy-=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy += 0.1 * y / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void CbelaviewView::OnPanLeft() 
+void CbelaviewView::OnPanLeft()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox-=0.25*x/mag;
+	x = r.right; y = r.bottom;
+	ox += 0.1 * x / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void CbelaviewView::OnPanRight() 
+void CbelaviewView::OnPanRight()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox+=0.25*x/mag;
+	x = r.right; y = r.bottom;
+	ox -= 0.1 * x / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
-void CbelaviewView::OnPanUp() 
+void CbelaviewView::OnPanUp()
 {
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	oy+=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy -= 0.1 * y / mag;
 
-	RedrawView();
+	InvalidateRect(NULL);
 }
 
 void CbelaviewView::OnViewCircprops() 

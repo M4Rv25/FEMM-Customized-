@@ -2764,58 +2764,54 @@ BOOL CcdrawView::OnEraseBkgnd(CDC* pDC)
      
 }
 
-void CcdrawView::OnPanDown() 
+void CcdrawView::OnPanDown()
 {
-	// TODO: Add your command handler code here
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-//	ox=ox-0.25*x/mag;
-	oy-=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy += 0.1 * y / mag;
 
 	InvalidateRect(NULL);
 }
 
-void CcdrawView::OnPanLeft() 
+void CcdrawView::OnPanLeft()
 {
-	// TODO: Add your command handler code here
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox-=0.25*x/mag;
-//	oy-=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	ox += 0.1 * x / mag;
 
 	InvalidateRect(NULL);
 }
 
-void CcdrawView::OnPanRight() 
+void CcdrawView::OnPanRight()
 {
-	// TODO: Add your command handler code here
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-	ox+=0.25*x/mag;
-//	oy-=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	ox -= 0.1 * x / mag;
 
 	InvalidateRect(NULL);
 }
 
-void CcdrawView::OnPanUp() 
+void CcdrawView::OnPanUp()
 {
-	// TODO: Add your command handler code here
+
 	RECT r;
-	double x,y;
+	double x, y;
 
 	GetClientRect(&r);
-	x=r.right; y=r.bottom;
-//	ox+=0.25*x/mag;
-	oy+=0.25*y/mag;
+	x = r.right; y = r.bottom;
+	oy -= 0.1 * y / mag;
 
 	InvalidateRect(NULL);
 }

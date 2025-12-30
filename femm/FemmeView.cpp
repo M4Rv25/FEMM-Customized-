@@ -2849,8 +2849,7 @@ void CFemmeView::OnPanDown()
 
 	GetClientRect(&r);
 	x=r.right; y=r.bottom;
-//	ox=ox-0.25*x/mag;
-	oy-=0.25*y/mag;
+	oy+=0.1*y/mag;
 
 	InvalidateRect(NULL);
 }
@@ -2863,8 +2862,7 @@ void CFemmeView::OnPanLeft()
 
 	GetClientRect(&r);
 	x=r.right; y=r.bottom;
-	ox-=0.25*x/mag;
-//	oy-=0.25*y/mag;
+	ox+=0.1*x/mag;
 
 	InvalidateRect(NULL);
 }
@@ -2877,8 +2875,7 @@ void CFemmeView::OnPanRight()
 
 	GetClientRect(&r);
 	x=r.right; y=r.bottom;
-	ox+=0.25*x/mag;
-//	oy-=0.25*y/mag;
+	ox-=0.1*x/mag;
 
 	InvalidateRect(NULL);
 }
@@ -2891,8 +2888,7 @@ void CFemmeView::OnPanUp()
 
 	GetClientRect(&r);
 	x=r.right; y=r.bottom;
-//	ox+=0.25*x/mag;
-	oy+=0.25*y/mag;
+	oy-=0.1*y/mag;
 
 	InvalidateRect(NULL);
 }
