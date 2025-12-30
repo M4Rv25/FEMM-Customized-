@@ -120,7 +120,7 @@ CbeladrawView::CbeladrawView()
 
 	// assume some default behaviors if they can't be
 	// loaded from disk
-	d_action=0;
+	d_action=4;
 	d_mag=100.;
 	d_gridsize=0.25;
 	d_showgrid=TRUE;
