@@ -59,6 +59,7 @@ BEGIN_MESSAGE_MAP(CbelaviewView, CView)
 	ON_COMMAND(ID_ZOOM_OUT, OnZoomOut)
 	ON_COMMAND(ID_ZOOM_WINDOW, OnZoomWindow)
 	ON_WM_MOUSEMOVE()
+	ON_WM_MOUSEWHEEL()
 	ON_WM_LBUTTONDOWN()
 	ON_WM_LBUTTONUP()
 	ON_WM_RBUTTONDOWN()
@@ -1132,6 +1133,18 @@ CbelaviewDoc* CbelaviewView::GetDocument() // non-debug version is inline
 
 /////////////////////////////////////////////////////////////////////////////
 // CbelaviewView message handlers
+
+BOOL CbelaviewView::OnMouseWheel(UINT nFlags, short delta, CPoint point)
+{
+	if (delta > 0) {
+		OnZoomIn();
+	}
+
+	if (delta < 0) {
+		OnZoomOut();
+	}
+	return CView::OnMouseWheel(nFlags, delta, point);
+}
 
 void CbelaviewView::OnMouseMove(UINT nFlags, CPoint point) 
 {

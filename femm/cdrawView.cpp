@@ -48,6 +48,7 @@ BEGIN_MESSAGE_MAP(CcdrawView, CView)
 	ON_COMMAND(ID_SEGMENT_OP, OnSegmentOp)
 	ON_COMMAND(ID_BLOCK_OP, OnBlockOp)
 	ON_WM_MOUSEMOVE()
+	ON_WM_MOUSEWHEEL()
 	ON_COMMAND(ID_ZOOM_IN, OnZoomIn)
 	ON_COMMAND(ID_ZOOM_OUT, OnZoomOut)
 	ON_COMMAND(ID_SHOW_GRID, OnShowGrid)
@@ -1011,6 +1012,18 @@ void CcdrawView::OnGroupOp()
 
 //	InvalidateRect(NULL);
 	DrawPSLG();
+}
+
+BOOL CcdrawView::OnMouseWheel(UINT nFlags, short delta, CPoint point)
+{
+	if (delta > 0) {
+		OnZoomIn();
+	}
+
+	if (delta < 0) {
+		OnZoomOut();
+	}
+	return CView::OnMouseWheel(nFlags, delta, point);
 }
 
 void CcdrawView::OnMouseMove(UINT nFlags, CPoint point) 

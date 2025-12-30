@@ -108,6 +108,7 @@ protected:
 	afx_msg void OnSegmentOp();
 	afx_msg void OnBlockOp();
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg BOOL OnMouseWheel(UINT nFlags, short delta, CPoint point);
 	afx_msg void OnZoomIn();
 	afx_msg void OnZoomOut();
 	afx_msg void OnShowGrid();
