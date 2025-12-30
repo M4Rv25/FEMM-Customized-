@@ -1470,10 +1470,10 @@ void CcdrawView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 	if (((nChar=='z') || (nChar=='Z')) && (GetKeyState(VK_CONTROL))) OnUndo();
 
-	if (nChar == VK_LEFT)  OnPanRight();
-	if (nChar == VK_RIGHT) OnPanLeft();
-	if (nChar == VK_UP)    OnPanDown();
-	if (nChar == VK_DOWN)  OnPanUp();
+	if (nChar == VK_LEFT)  OnPanLeft();
+	if (nChar == VK_RIGHT) OnPanRight();
+	if (nChar == VK_UP)    OnPanUp();
+	if (nChar == VK_DOWN)  OnPanDown();
 	if (nChar==VK_PRIOR) OnZoomIn();	// page up
 	if (nChar==VK_NEXT)  OnZoomOut();	// page down
 	if (nChar==VK_HOME)  OnZoomNatural();
