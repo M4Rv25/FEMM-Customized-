@@ -132,7 +132,7 @@ CFemmviewView::CFemmviewView()
 	d_ShowAr=TRUE; 		
 	d_ShowAi=FALSE;	
 	d_ShowMask=FALSE;
-	d_DensityPlot=0;
+	d_DensityPlot=1;
 	d_VectorPlot=0;
 	d_PtsFlag=FALSE;		
 	d_ResetOnReload=FALSE;
