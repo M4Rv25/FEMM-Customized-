@@ -1580,10 +1580,8 @@ FONT 8, "Tahoma"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,145,160,50,14
     EDITTEXT        IDC_DXFTOL,10,15,180,14,ES_AUTOHSCROLL
-    LTEXT           "If the program is consolidating points that ought not be consolidated, make the Tolerance a smaller number (i.e. an order of magnitude less).",IDC_STATIC,5,105,190,25
-    LTEXT           "If problems occur in the DXF import process, such as nearly co-located nodes that ought to be the same nodes, nodes that don't quite intersect lines or arcs where they ought to, and so on, make the DXF tolerance a larger number.",IDC_STATIC,5,65,190,35
-    LTEXT           "In most cases, accepting the suggested value will yield adequate results.",IDC_STATIC,5,135,190,20
-    LTEXT           "Features in the DXF file smaller than the specified tolerance are consolidated.",IDC_STATIC,5,40,190,20
+    LTEXT           "A solution I commonly use when import does not work:\n\nUsing Blender with AutoCAD extensions installed\n\n 1) Import DFX file\n\n 2) Verify correct scale\n\n 3) Convert to mesh\n\n 4) Export DXF file",IDC_STATIC,5,65,190,90
+    LTEXT           "Features in the DXF file smaller than the specified tolerance are merged.",IDC_STATIC,5,40,190,20
     GROUPBOX        "Tolerance for DXF Import",IDC_STATIC,5,5,190,30
 END
 
