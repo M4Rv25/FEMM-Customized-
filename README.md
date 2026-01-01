@@ -20,9 +20,7 @@ I made this customized version of the Oct2023 FEMM release to improve its usabil
 
 	[Choosing color palettes](https://seaborn.pydata.org/tutorial/color_palettes.html) : "hue variations are not well suited to representing numeric data"
 
-	I implemented Seaborn's [rocket](https://pycmap.readthedocs.io/en/stable/catalog/sequential/seaborn%3Arocket/) colormap because its the best perceptually uniform colormap I have come across.
-
-	(Honorable mention:  [Fabio Crameri - Scientific colormaps](https://www.fabiocrameri.ch/colourmaps/))
+	I implemented Seaborn's [rocket](https://cmap-docs.readthedocs.io/en/latest/catalog/sequential/seaborn%3Arocket/) colormap because its the best perceptually uniform colormap I have come across.
 
 ---
 
