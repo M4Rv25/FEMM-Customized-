@@ -56,7 +56,7 @@ CbeladrawDoc::CbeladrawDoc()
 	d_minangle=DEFAULT_MINIMUM_ANGLE;
 	d_depth=1;
 	d_coord=0;
-	d_length=0;
+	d_length=1;
 	d_type=0;
 
 	// Figure out what directory the executables

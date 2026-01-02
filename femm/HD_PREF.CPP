@@ -42,7 +42,7 @@ hdCPref::hdCPref(CWnd* pParent /*=NULL*/)
 
 	s_action=0;
 	s_coord=0;
-	s_length=0;
+	s_length=1;
 	s_type=0;
 
 	clist=(COLORREF *)calloc(16,sizeof(COLORREF));

@@ -43,7 +43,7 @@ CPref::CPref(CWnd* pParent /*=NULL*/)
 	
 	s_action=0;
 	s_coord=0;
-	s_length=0;
+	s_length=1;
 	s_type=0;
 	s_solver=0;
 
