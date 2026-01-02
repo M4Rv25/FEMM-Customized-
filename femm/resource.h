@@ -15,6 +15,7 @@
 #define IDR_LEFTBAR                     112
 #define IDR_FEMMTYPE                    113
 #define IDR_MAIN1                       114
+#define IDR_MAIN2                       115
 #define IDD_ABOUTBOX                    120
 #define IDD_PROBDLG                     121
 #define IDD_GRIDDLG                     122
