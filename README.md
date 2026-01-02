@@ -8,10 +8,10 @@ I made this customized version of the Oct2023 FEMM release to improve its usabil
 
 ---
 
-<img width="1918" height="1078" alt="Screenshot 2025-12-31 191410" src="https://github.com/user-attachments/assets/e07035a2-6ec6-4f2a-bd2c-673225d70ea5" />
-<img width="1918" height="1078" alt="Screenshot 2025-12-31 191433" src="https://github.com/user-attachments/assets/82fd63b3-f55e-4f5a-81bf-f0e9e3812f15" />
-<img width="1918" height="1078" alt="Screenshot 2025-12-31 185957" src="https://github.com/user-attachments/assets/21bcdf89-52ef-4547-a285-f20c1e9d4978" />
-<img width="1918" height="1078" alt="Screenshot 2025-12-31 190010" src="https://github.com/user-attachments/assets/15042313-954a-4779-a307-888df6931908" />
+<img width="1918" height="1078" alt="Screenshot 2026-01-02 122128" src="https://github.com/user-attachments/assets/eca69e34-9192-42d8-a86b-6e7cd10097c9" />
+<img width="1918" height="1078" alt="Screenshot 2026-01-02 122049" src="https://github.com/user-attachments/assets/b78ac68a-6106-4ea1-b2ee-54af7407ffe3" />
+<img width="1918" height="1078" alt="Screenshot 2026-01-02 122000" src="https://github.com/user-attachments/assets/094c6dc4-f0f7-4fdb-aabf-16ccce3e6fe0" />
+<img width="1918" height="1078" alt="Screenshot 2026-01-02 121938" src="https://github.com/user-attachments/assets/fc65198c-c160-4339-be3d-7b6b71468d77" />
 
 
 ## Changes
@@ -30,7 +30,7 @@ I made this customized version of the Oct2023 FEMM release to improve its usabil
 
 -	Flux line, grid and mesh colors were changed.
 
--	The sidebar is removed and integrated into the topbar (except for lua buttons; they were removed).
+-	The sidebar is removed and integrated into the topbar.
 
 -	Panning directions were inverted (feels more intuitive to me), and panning distance was reduced.
 
