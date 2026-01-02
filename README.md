@@ -32,7 +32,7 @@ I made this customized version of the Oct2023 FEMM release to improve its usabil
 
 -	The sidebar is removed and integrated into the topbar (except for lua buttons; they were removed).
 
--	Panning directions were inverted (feels more intuitive to me).
+-	Panning directions were inverted (feels more intuitive to me), and panning distance was reduced.
 
 -	Mesh is now finer (low resolution previously impacted results).
     NOTE: I do see the compromised solving time ...
@@ -48,6 +48,8 @@ I made this customized version of the Oct2023 FEMM release to improve its usabil
 Clone the repository and ...
 
 ... run "femm.exe" found in the "release64" folder.
+
+or
 
 ... open "femm43_VS2026.sln" in Visual Studio and build FEMM yourself.
 
