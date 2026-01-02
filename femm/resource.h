@@ -156,7 +156,6 @@
 #define IDC_DEL_PROP                    1022
 #define IDC_DEF_XYPLOT                  1023
 #define IDC_LENGTH_UNITS                1024
-#define IDC_DEF_SHOWOUTWND              1025
 #define IDC_SOLVER                      1025
 #define IDC_GRIDSIZE                    1026
 #define IDC_BSMART                      1026

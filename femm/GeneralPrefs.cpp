@@ -36,7 +36,6 @@ void CGeneralPrefs::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_DEF_DOC, m_defdoc);
 	DDX_Check(pDX, IDC_DEF_LUA_CONSOLE, m_def_lua_console);
 	DDX_Check(pDX, IDC_DEF_XYPLOT, m_def_xyplot);
-	DDX_Check(pDX, IDC_DEF_SHOWOUTWND, m_def_show_output_window);
 	DDX_Check(pDX, IDC_DEF_SMARTMESH, m_def_smartmesh);
 	//}}AFX_DATA_MAP
 }

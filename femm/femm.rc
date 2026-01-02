@@ -521,7 +521,6 @@ BEGIN
         MENUITEM "Show Block Names",            ID_VIEW_SHOWNAMES
         MENUITEM SEPARATOR
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
-        MENUITEM "&Output Window",              ID_PT_PROP
         MENUITEM "Lua Console",                 ID_VIEW_LUACONSOLE
     END
     POPUP "&Operation"
@@ -2421,15 +2420,13 @@ IDD_GENPREFS DIALOGEX 0, 0, 351, 206
 STYLE DS_SETFONT | WS_CHILD
 FONT 8, "Tahoma", 0, 0, 0x0
 BEGIN
-    GROUPBOX        "General Preferences",IDC_STATIC,75,40,190,78
+    GROUPBOX        "General Preferences",IDC_STATIC,75,40,190,63
     CONTROL         "Display Lua console at startup",IDC_DEF_LUA_CONSOLE,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,55,145,10
     CONTROL         "Open new window for X-Y plots",IDC_DEF_XYPLOT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,70,135,10
     COMBOBOX        IDC_DEF_DOC,85,143,175,155,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     GROUPBOX        "Default Document Type",IDC_STATIC,75,128,190,40
-    CONTROL         "Show Output Window by default",IDC_DEF_SHOWOUTWND,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,85,135,10
-    CONTROL         "Use smart meshing",IDC_DEF_SMARTMESH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,100,135,10
+    CONTROL         "Use smart meshing",IDC_DEF_SMARTMESH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,85,135,10
 END
 
 IDD_TREETEST_DIALOG DIALOGEX 0, 0, 337, 191
