@@ -93,7 +93,7 @@ CViewPref::CViewPref(CWnd* pParent /*=NULL*/)
 	m_d_shownames = FALSE;
 	//}}AFX_DATA_INIT
 	
-	m_d_DensityPlot=0;
+	m_d_DensityPlot=1;
 	m_d_EditAction=0;
 	m_d_VectorPlot=0;
 
