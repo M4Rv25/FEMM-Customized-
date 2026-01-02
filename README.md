@@ -23,6 +23,7 @@ I made this customized version of the Oct2023 FEMM release to improve its usabil
 	I implemented Seaborn's [rocket](https://cmap-docs.readthedocs.io/en/latest/catalog/sequential/seaborn%3Arocket/) colormap because its the best perceptually uniform colormap I have come across.
 
 ---
+-	Default unit was changed to millimeters.
 
 -	The output window that popped up on viewing results was deleted (it annoyed me).
 
